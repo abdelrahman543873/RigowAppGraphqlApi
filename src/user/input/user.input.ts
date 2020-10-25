@@ -17,6 +17,6 @@ export class UserInput {
   @Field({ nullable: true })
   password?: string;
   
-  @Field({nullable:true})
+  @Field(()=> Int,{nullable:true})
   businessProfile?: number;
 }
