@@ -16,7 +16,10 @@ export class CreateUserDto {
 
   @Field()
   password: string;
-  
-  @Field(()=> Int)
+
+  @Field(() => Int)
   businessProfile: number;
+
+  @Field(() => Int)
+  userProfile?: number;
 }

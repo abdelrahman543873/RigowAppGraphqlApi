@@ -48,7 +48,7 @@ export class BusinessResolver {
   @Mutation(() => createPhotosDto)
   async addingPhotos(
     @Args('input') photosInput : PhotosInput,
-    @Args('photos', { nullable: true }) photos?: FileUpload,
+    @Args('photos', { type: () => GraphQLUpload, nullable: true }) photos?: FileUpload,
   ): Promise<createPhotosDto> {
     return this.businessService.addPhotos(photosInput, photos);
   }
